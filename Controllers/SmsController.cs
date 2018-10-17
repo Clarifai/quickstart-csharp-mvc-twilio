@@ -38,7 +38,7 @@ namespace WebApplication23.Controllers
 
                 if (result.IsSuccessful)
                 {
-                    var concepts = result.Get()[0].Data.Select(c => $"{c.Name}:{c.Value}");
+                    var concepts = result.Get().Data.Select(c => $"{c.Name}:{c.Value}");
                     var body = string.Join(", ", concepts);
 
                     response.Message(body);
